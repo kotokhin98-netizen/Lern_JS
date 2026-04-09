@@ -1,0 +1,1010 @@
+модуль 2 - основы джава скрипт
+програмы написанные на js называются - скриптами (не путайте джава и JS).
+JS придает функционал на веб-страницах (веб-игра) с помощью js можно создавать динам. html и css элементы.
+alert("hello world") - днанная функция выводит любой результа в виде всплывающего окна.
+console.log("hello world") - выводит результат в консоль (рекомендуем юзать).
+<script src="./путь"></script> - подключение js.
+
+-----ТЕМА 1 - переменные
+переменная - это ячейка память для хранения данных. let , var, const - операторы обьявления переменных
+let - локальная переменная (любой тип данных)
+var - глобальная переменная 
+const - локальная константа (не изменяемая и не перераспределяемая переменная).
+(
+let a = 5
+var b = 3
+const c = 4
+alert (a+b)
+
+a = 5
+b = 3
+c = 4
+alert (a+b)
+программу можно записать и так и так)
+если не писать никаких операторов то все переменные - глобальные.
+
+-----ТЕМА 2 - типы данных
+a=5, b="hello world", c="true", d=[3, "true", 5,5], c={ name:'Grishin', age: 27}
+e = a + a = 10; z = b + b = "hellohello"; s = a + b = "5hello"
+a - number или int (число)
+b - string (строка)
+с - Boolean (булевы)
+d - массив (array)
+e - обЪект
+
+ a = 5
+ b = "hello"
+ c = 3,14
+ d = false
+console.log(typeof(d))
+typeof - называет тип данных.
+null - пустое значение.
+undefined - не найденно.
+
+-----ТЕМА 3 - встроенные функции взаимодействия с пользователем
+alert() - уже было.
+prompt() - вызывает всплывыающие окно для ввода данных с клавы.
+confirm() - вызывает всплывающие окно для подтверждения действий пользователя.
+ 
+userName=prompt()
+alert("привет,"+ userName)
+данная команда приветствует вас.
+
+-----ТЕМА 4 - преобразование типов данных
+джава скрипт - автоматический выполняет приобразование типов в различных контекстах, но также позваляет явно выполнить такие преобразования.
+
+a="123"
+b=5
+newA = Number(a)
+console.log(newA+b)
+эта команда преобразовывает
+
+a="123"
+b=5
+newA = Number(a)
+newB = String(b)
+console.log(a+newB)
+эта команда тоже преобразовывает
+
+a="123"
+b=5
+newA = Number(a)
+newB = String(b)
+c="3,14"
+newC=parseInt(c)
+console.log(newC)
+эта команда убирает дробное число
+
+Number - явно пытается преобразовывать переменные в числовой вид данных.
+Parseint - тоже пытается преобразовывать переменные в числовой вид данных но уберает дробную часть. 
+string - преобразует в строку.
+
+-----------ТЕМА 5 матиматичиские операции
+
+let x=10;
+let y=5;
+let z="first";
+let c="second";
+console.log (x+y)(сложение)
+console.log (x-y)(вычетание)
+console.log (x*y)(умножение)
+console.log (x/y)(деление)
+console.log (x**y) (возводит в степень)
+console.log (y%x) /*выводит дробную часть*/ 
+
+Задание:
+Напишите программу которая просит пользователя ввести данные возраст и выводит 
+данные через десять лет
+
+Решение:
+let age = prompt("Введите возраст")
+let b=10;
+newAge=Number(age)
+newB=Number(b)
+alert(newAge+newB)
+
+-----------------ТЕМА 6 операторы сравнение
+ "<"  условие верно если первый оперант меньше второго.
+ ">"  условие верно если первый оперант больше второго.
+ "!=" не равнно
+ "<=" условие верно если первый оперант меньше второго или равен второму.
+ ">=" Условие верно если первый оперант больше второго или равен второму. 
+ "==" Условие верно если два оперант равны. 
+ "==="Условие верно если оба операнта равны и имеет одинаковые значение. 
+
+a=0;
+b="0";
+a==b (true)
+a===b (false) /* разные типы данных*/
+
+------------------ТЕМА 7 Условные операторы (if,else)
+
+Условные операторы позволяют выполнят различные действия от выполнения определенных условий.
+Основные условные операторы:
+if(){}
+else if(){}
+else{}
+Инструкция if вычесляет выражение в круглых скобках и преобразовывает результат к логическому типу 
+
+let x=+prompt()
+if(x>5){
+    console.log("x больше пяти")
+}
+else if (x===5){
+    console.log("x равен пяти")
+}
+else{
+    console.log("x меньше пяти ")
+}
+команда +prompt сразу приобразовает в число.
+
+Применение тернарного оператора:
+
+let x=3;
+let massage =(x>5)?"больше 5": "меньше или равен 5";
+console.log(massage)
+
+---------ТЕМА 8 Логические операторы
+
+Логические операции используются для комбинирование или изменение логических значений, они позволяют создовать более сложные условие для проверки
+
+        Пример:
+
+let x=true
+let y=false
+
+&& - логическая "И" это умножение с точки зрения матиматики.
+|| - логическая "Или" это сложение с точки значений матиматики.
+! - логическая "НЕ".
+
+
+ДЗ:
+1:Напишите программу которая запрашивает у пользователя число и проверяет принадлежит ли число диапозану от 10 до 100, результат в консоль 
+2: Напишите программу которая запрашивает у пользователя число и выводит собщение о том четное или нет.
+3: Напишите программу  проверят возраст пользователя если возраст пользователя меньше 18 лет то консоль пишет доступ запрещен 
+если больше то доступ разрешон  решение с помощью тернарного оператора 
+
+Решение:
+
+let x=+prompt("Введите число")
+if(x>=10&&x<=100){console.log("Входит в диапазон")}
+else{console.log("не входит в диапазон")}
+
+
+/*let x=+prompt('Введите число')
+if(x%2==0){console.log("чётно")}
+else{console.log ("нечетное")}*/
+
+/*let x=+prompt('Введите свой возраст')
+let massage =(x>=18)?"Доступ разрешен":"Доступ запрещен";
+console.log(massage)*/
+
+Напишите программу которая запрашивает у пользователя длины трех сторон треугольника, и в результате программа выводит тип треугольника:
+
+let a=parseFloat(prompt("a"))
+let b=parseFloat(prompt("b"))
+let c=parseFloat(prompt("c"))
+
+if(a===b&&a===c&&c===a&&c===b&&c===a&&c===b){
+ console.log("треугольник равно стороний")
+} 
+else if(a===b||b===c||a===c){
+console.log("треугольник равнобедренный")
+}
+else if ((a*2===b*2+c*2) || (b*2===a*2+c*2) || (c*2===b*2+a*2)){
+    console.log("треугольник прямоугольный")
+}
+else{"треугольник не коректный"}
+
+Напишите программу которая показывает на какой кординатной четверти расположена точка:
+
+решение:
+
+let x=+prompt("Введите x")
+let y=+prompt("Введите y")
+
+if(x>0&&y>0){
+    console.log("первая четверть")
+}
+else if (x<0&&y>0){
+    console.log("вторая четверть")
+}
+else if(x<0&&y<0){
+    console.log("третья часть")
+}
+else if(x>0&&y<0){
+    console.log("четвертая часть")
+}
+
+else if (x===0&&y<0){
+    console.log("лежит на оси Y")
+}
+
+else if (x<0&&y===0){
+    console.log("лежит на оси x")
+}
+
+else{console.log("начало пути")}
+
+--------ТЕМА 9 циклы while и for.
+
+Зачастую встает задача сделать одно и тоже действие много раз например(перебрать все число от 0 до 10 выполняя одинаковый код. сделать сщечик)
+
+цикл while проверяет блок кода пока условие кода истенно
+сначало идет проверка Условие
+если условие верно идет блок кода 
+после выполненения блока кода идет проверка условия 
+цикл работает до тех пор пока условие верно
+
+Например:
+
+let i = 0
+while (i<5){
+    alert(i)
+    i=i+1 || i++
+}
+
+do while 
+оператор do позволяет выполнить любую операцию а потом начнет проверку (то есть в любом случае цикл один раз да сработает,даже условие не истенно)
+
+Например:
+let i =0
+do{
+    alert(i)
+    i++
+}
+while(a<5) .
+
+цикл for состоит из трех частей:
+1) иницилизация
+2) условие
+3) обновление выражения .
+ 
+Например:
+ 
+ for(i=0;i<5;i++){
+    alert(i)
+}
+
+Задачи:
+1) программа запрашивает у пользователя логин и пароль  логин==admin пароль==password. если что-то из этого не равно то в "В доступе отказанно"
+2) программа запрашивает у пользователя число и выводит сумму всех чисел от 1 до этого числа 
+3) программа запрашивает у пользователя число (n) если введенное число четное - то программа  
+Решение:
+1) 
+let a= prompt('Введите логин')
+let b= prompt('Введите пароль')
+
+if(a=="admin"&& b=="password"){
+    alert("Доступ разрешен")
+}
+else{
+    alert("Отказано в доступе")
+
+}
+
+3)
+let n =+prompt('Введите ваше число')
+
+if(n%2===0){
+    let sum = 1
+for(let i =1;i<n;i++){
+    sum= sum+i;
+    console.log(sum);
+}
+}
+else{
+    let multiplication = 1;
+    for(let i =1;i<n;i++){
+        multiplication= multiplication * i;
+        console.log(multiplication)
+    }
+
+}
+----------ТЕМА 10 прерывание цикла (break) и продолжение (continue)
+Обычно цикл завершается при вычесление значение false, но мы можем выйти из цикла с помощью оператора break 
+например: программа подсчитывает сумму чисел  пока пользователь их вводит их с клавиатуры.
+Полностю выполняет завершение цикла.
+continue - При выполнению оператора continue цикл не прерывается а переходит в следующию итерацию,но только когда значение (true).
+
+с помощью for и continue чтобы вывести только не четные значение
+
+--------ТЕМА 11 конструкция swhitch и case и d
+конструкция используются для выполненения различных действий в зависимости от значения вырожения. Она представляет альтернативу цыпоке if else. И используются когда нужно сравнить одно значение сомногими  другими вариантами.
+С клавиатуры вводится число. если число равно 3, то выводим результат "Мало"
+                            если число равно 4, то выводим результат "В точку "
+                            если число равно 5,то выводим результат "Много"
+                            если число равно < 5 
+
+let a =+prompt();
+switch(a){
+    case 3:
+        alert('мало');
+        break;
+    case 4:
+        alert('в точку');
+        break;
+    case 5: 
+        alert('много');
+        break;
+
+    default:
+        alert('Мимо');
+        break;    
+}
+
+ДЗ(С клавиатуры вводится число от 0 до 3 включительно. С помощью конструкции switch case вывидите результат если результат равен 0, 'вы ввели 0'
+                                                                                                                           равен 1, 'вы ввели 1'
+                                                                                                                           равен 2, 'вы ввели 2'
+                                                                                                                           равен 3, 'вы ввели 3'     
+                                                                                                                           равен больше то 'число не входит в диапазон'
+
+
+Решение:let a=+prompt()
+switch (a) {
+case 0:
+alert("Вы ввели 0")
+break;
+case 1:
+alert("Вы ввели 1")
+break;
+
+case 2:
+alert("Вы ввели 2")
+break;
+case 3:
+
+alert("Вы ввели 3")
+break;
+
+default:
+alert("Число не входит в диапазон")
+break;
+}
+
+----------ТЕМА 12 функции в js
+
+    function func(){// function declaration
+    alert('Все привет')
+
+    }
+    func() // вызов
+
+//function func (параметры){
+//    alert('Всем привет')
+}
+
+Локальные переменные внутри функции видны только внутри этой функции. Но функция может использовать переменные обьявление за телом функции.
+
+параметры функции это данные которые могут быть переданны
+
+
+function func(a,b){// function declaration
+    console.log(a+b)
+    return a+b;
+
+    }
+
+let sum = func(3,5)
+console.log(sum)
+console.log(func(5,3))
+
+
+
+let sum =function(a,b){// function declaration
+    console.log(a+b)
+    return a+b;
+
+    }
+
+
+console.log(sum(3,5))
+
+function arrow:
+let sum =(a,b)=> a+b
+
+console.log(sum(3,5))
+
+программа считает сумму значений аргументов по количеству аргументов
+
+function sumAll (){
+    let sum = 0
+    for(let i =0;i< arguments.length;i++){
+        sum = sum + arguments[i]
+    }
+    return sum
+}
+console.log(sumAll(1,2,3,4))
+
+задача:
+
+function cor() {
+let a = +prompt ("введите число");
+a = a**2;
+alert(a);
+}
+ 
+cor()
+
+
+
+let numSquare = (num) => {
+        num = num ** 2
+        console.log(num)
+}
+ 
+numSquare(prompt())
+
+
+
+
+let numCheck = (num1, num2) => {
+        if(num1 > num2)
+                console.log(num1)
+        else if(num1 < num2)
+                console.log(num2)
+        else{console.log("they are equal")}
+}
+ 
+numCheck(prompt(), prompt())
+
+
+ДЗ(С клавиатуры вводится число от 0 до 3 включительно с помощью конструкции switch и case выведите результат,
+если введное число 0 = то 0
+если введеное число 1 = то 1
+если введенное число 2 или 3 то программа покажет вы ввели 2 и 3
+при вводе других чисел программа выдаст результат число вне диапазона от 0 до 3
+
+РЕАЛИЗОВАТЬ С ПОМОЩЬЮ ФУНКЦИИ. При этом, одна функция должна быть БЕЗ ПАРАМЕТРОВ/АРГУМЕНТОВ, а вторая функция - с параметрами/аргументами.
+ 
++ Решать задания code-basics.com (создать уч.запись). )
+
+Решение ДЗ: 
+// Функция БЕЗ параметров - запрашивает ввод
+function getInput() {
+    let a = +prompt("Введите число от 0 до 3:");
+    checkNumber(a);  // вызываем вторую функцию
+}
+
+// Функция С параметром - обрабатывает число
+function checkNumber(num) {
+    switch (num) {
+        case 0:
+            alert("Вы ввели 0");
+            break;
+        case 1:
+            alert("Вы ввели 1");
+            break;
+        case 2:
+        case 3:
+            alert("Вы ввели 2 и 3");
+            break;
+        default:
+            alert("Число не входит в диапазон");
+            break;
+    }
+}
+
+// Запускаем программу
+getInput();
+
+
+getInput() - функция без параметров, которая:
+Запрашивает число через prompt
+Преобразует строку в число (+)
+Вызывает checkNumber(a) и передает туда число
+checkNumber(num) - функция с параметром num, которая:
+Проверяет число через switch-case
+Для 0 и 1 выводит отдельные сообщения
+Для 2 и 3 (без break между ними) выводит одно сообщение
+default обрабатывает все остальные числа
+Чтобы запустить программу, просто вызовите getInput().
+
+самостоятельная: 
+
+/*let summ = +prompt("Введите сумму покупки");
+if (summ > 5000) {
+    alert("Скидка 30%");
+} else if (summ > 2000) { 
+    alert("Скидка 15%");
+} else if (summ >= 1000) { 
+    alert("Скидка 10%");
+} else {
+    alert("Скидки нет");
+}
+Задание 1 */
+
+/*let a =+prompt("Введите число от 1 - 7")
+switch(a){
+case 1:
+alert("Понидельник")
+break;
+
+case 2:
+alert("Вторник")
+break;
+
+case 3:
+alert("Среда")
+break;
+
+case 4:
+alert("Четверг")
+break;
+
+case 5:
+alert("Пятница")
+break;
+
+case 6:
+alert("Суббота")
+break;
+
+case 7:
+alert("Воскресенье")
+break;
+
+default:
+alert("Вы ошиблись")
+break;
+}
+"привет".length
+Задание 2 */
+
+/*let a = prompt('Введите слово')
+alert(a.length)
+Задание 7 про длину слова */
+
+
+
+
+
+/*let word= prompt("Введите слова") 
+
+if (word.toLowerCase().includes('к')) {
+  console.log("Буква 'к' найдена");
+} else {
+  console.log("Буквы 'к' нет");
+}
+
+или 
+
+let word = prompt("Введите слово:");
+alert(word.toLowerCase().includes('к') ? "есть такая буква " : "Нет такой буквы");
+
+задание 6 
+*/
+
+/*let a =+prompt("Введите перывй предмет ")
+let b =+prompt("Введите второй предмет ")
+let c =+prompt("Введите третий предмет ")
+
+let final = (a+b+c) /3 
+if(final>=90 && final <= 100 ){
+    alert('5')
+}
+else if (final >=75 && final <= 89){
+    alert('4')
+
+}
+
+else if(final>=60 && final<=74){
+    alert('3')
+}
+else{
+    alert('2')
+}
+    Задание 5 Про оценку по среднему числу */
+
+
+
+    //1. Function declaration
+//С параметрами/с аргументами
+// //С return
+// function sum(a, b) {
+//     return a + b //функция должна возвращать результат //callback
+// }
+ 
+// console.log(sum(3,2))//Вызов функции
+ 
+ 
+//Без параметров/без аргументов
+//Без return
+// function sum () {
+//     let a = 3
+//     let b = 2
+//     let c = a + b
+//     console.log(c) //callback
+// }
+// sum()
+ 
+//2. Function expression
+//С параметрами/с аргументами и с return
+// const sum = function (a, b) {
+//     return a + b
+// }
+// console.log(sum(4,5))
+ 
+//Без параметров/без аргументов// без return
+// const sum = function () {
+//     let a = 3
+//     let b = 2
+//     let c = a + b
+//     console.log(c)
+// }
+ 
+// sum()
+ 
+// console.log(typeof(sum))
+ 
+//3. Arrow function
+//С параметрами/с аргументами и с return
+// const sum = (a, b) => a + b
+// console.log(sum(3,2))
+ 
+// const sum = (a, b) => {
+//     return a + b
+// }
+// console.log(sum(3,2))
+ 
+ 
+//Без параметров/без аргументов// без return
+// const sum = () => {
+//     let a = 3
+//     let b = 2
+//     let c = a + b
+//     console.log (c)
+// }
+ 
+// sum()
+----------ТЕМА13 Объект-конструктор 
+ 
+(Learn JS - библиотека по JS)
+
+-------ОбЪекты
+const user = {
+name: 'Petrov',
+age: 29,
+number: "666"
+}
+
+const admin = user
+console.log(admin.name) <--- вывод значения свойства обЪекта (name)
+
+const user = {
+name: 'Petrov',
+age: 29,
+number: "666"
+}
+
+user["name"] = "Sidodrov" <----- изменение значения свойства обЪекта
+console.log(user.name) <----- вывод значения свойства обЪекта (name)
+delete user["name"] <------ удаление свойства со значением
+
+const user = {
+name: 'Petrov',
+age: 29,
+number: "666"
+}
+
+const clone = {}
+
+for (let key in user){
+    clone[key] = user[key]
+}
+
+clone.name = "Sidorov"
+console.log(clone.name)
+Необходимо для изменения клона без влияния на оригинал
+
+console.log(["phone"] in user) <---- проверка наличия свойства в объекте
+
+
+
+
+ ---------ТЕМА 14 Массив 
+
+const array = ["hello", true, 3, "old", 3.14]
+console.log(array) <---- вывод всех элементов массива
+
+const array = ["hello", true, 3, "old", 3.14]
+array[0] = "poka" <----- изменение значения элемента 
+console.log(array[0]) <---- вывод элемента массива по индексу 0 - "hello"
+console.log(array.length-1) <------ выводит последний элемент массива
+
+function sumALL(){
+    let sum = 0;
+    for( let i = 0; i<arguments.length; i++){
+        sum += arguments[i]
+    }
+    return sum;
+}
+console.log(sumALL(1,2,3))
+
+array.push('5') <----- добавление нового элемента в массив
+array.pop() <----- удаление последнего элемента в массиве
+array.unshift(0) <----- добавление элемента в начало массива
+console.log(array.indexOf(3)) <------ определение индекса элементапо его значению
+console.log(array.includes()) <---- определяет наличе элемента в массиве при помощи true, false
+console.log(array.sort()) <----- отсортировывает массив
+console.log(array.reverse()) <------ переварачивает порядок элементов в массиве
+forEach() <----- принимает функцию для каждого элемента массива
+
+const array = ["hello", true, 3, "old", 3.14]
+array.forEach(function(element){ <----- выведем все элементы в консоль
+console.log (element) <----- callback в виде вывода элемеента
+})
+
+const array = ["hello", true, 3, "old", 3.14]
+array.forEach(function(element, index){
+console.log (element, index) <------ вывод всех элементов и его индексом
+})
+
+let matrix = [
+[1,2,3],
+[4,5,6],
+[7,8,9]
+];
+
+alert( matrix[2][1] ); <------ многомерный массив
+
+map() <----- применяет функцию к каждому элементу массива, возвращая НОВЫЙ массив
+const array = [1,2,3,4,5]
+let newARRAY = array.map(function(element){
+return element + 1
+})
+console.log(newARRAY)
+console.log(array)
+
+const array = [1,2,3,4,5]
+let newARRAY = array.map((element => element * 2))
+console.log(newARRAY)
+console.log(array) <------- с применением arrow function
+
+filter() <----- применяет к функцию к каждому элементу массива, соот. условию и возвращает новый массив
+
+const array = [1,2,3,4,5]
+let newARRAY = array.filter(function(element){
+if(element > 0){
+    return true
+}
+else{
+    return false
+}
+})
+console.log(newARRAY)
+
+const array = [1,2,3,4,5]
+let newARRAY = array.filter(num => num % 2 === 0)
+console.log(newARRAY) <----- со стрелочными функциями
+
+ команда .pop удалет последний элемент массива
+ un shift добовляет элемент в начало массива
+ shift - первый элемент массива
+
+ !14 тема: DocumentObjectModel:
+
+<body id ="body">
+1)  document.body.style.background = "green" -- cделать фон нужного цвета
+//  document.body.style.color = "purple"
+
+const body = document.querySelector("body")
+2)  document.getElementById("body") // (поиск элемента по id)
+
+document.getElementById("body").style.background = "red" // (поиск элемента по id и смена цвета)
+
+3)  document.querySelector("body") // поиск первого body внутри html
+    document.querySelector("#body") // поиск первого body по id внутри html
+    document.querySelector(".body") // поиск первого body по class внутри html
+
+3.5)const firstDiv = document.querySelector("div:nth-child(2)")
+        firstDiv.textContent = "hello, your license expired"
+
+4)  body.innerHTML = "Hello, dawg" // возвращает контент (HTML-разметка и текстовый контент)
+"<h1>Hello, dawg</h1>" // ТАК НЕБЕЗОПАСНО! (XXS-уязвимости)
+
+5)  body.textContent = "Hello, World!" // Метод безопаснее
+    body.innerText // Устаревший
+
+// Создание обработчика событий click
+6) const clicker = () => {
+const div = document.querySelector("div")
+div.textContent = "Hello, World!"
+}
+
+(in .html:)
+<button onclick="clicker()">
+        click me, lol
+    </button>
+
+7) document.querySelector("button").addEventListener("click", clicker) // Вешает обработчик события на элемент
+example:
+    const clicker = () => {
+    const div = document.querySelector("div")
+    div.textContent = "Hello, World!"
+}
+document.querySelector("button").addEventListener("click", clicker)
+
+8)setAttribute("тип аттрибута", "название") // вставка тип аттрибута/добавление аттрибута к элементу
+
+9)removeAtrribute("тип аттрибута") // удаление аттрибута элемента
+
+    // Работа с атрибутами class элементов:
+10) "элемент".classlist.add/remove/toggle("название")
+    // toggle -- добавляет класс элементу если отсуствует, и удаляет если присутствует.
+
+const clicker = () => {
+const firstDiv = document.querySelector("div")
+firstDiv.classList.toggle("black")
+}
+.white {
+    background-color: white;
+    height: 80px;
+    color: black;
+}
+ 
+.black {
+    background-color: rgb(0, 0, 0);
+    height: 80px;
+    color: rgb(255, 255, 255);
+}
+<button onclick="clicker()">CLICK</button>
+
+11) createElement("div") // "что создать?"
+parent.before/prepend/append/after(новый элемент) // "куда создать?"
+
+    const firstDiv = document.querySelector("div")
+    const firstOutP = document.createElement("p")
+    firstOutP.textContent = "I'm the zero"
+    firstDiv.before(firstOutP)
+
+    const firstP = document.createElement("p")
+    firstP.textContent = "I'm the first"
+    firstDiv.prepend(firstP)
+
+    const secondP = document.createElement("p")
+    secondP.textContent = "I'm the second"
+    firstDiv.append(secondP)
+
+    const thirdP = document.createElement("p")
+    thirdP.textContent = "I'm the third"
+    firstDiv.append(thirdP)
+
+    const lastOutP = document.createElement("p")
+    lastOutP.textContent = "I'm the last outside"
+    firstDiv.after(lastOutP)
+
+12) removeChild("дочерний элемент") // удаление элемента внутри родительского
+
+
+13) querySelectorAll("div")
+
+        const Divs = document.querySelectorAll("div")
+        Divs.forEach(Element => {
+            Element.classlist.add("Divs")
+            Element.textContent = "bruh"
+            console.log(Element.textContent)
+        })
+
+        дз:
+        код для css:
+        /* Общие стили для красоты */
+        body { font-family: sans-serif; line-height: 1.6; }
+        section { border: 1px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+        h3 { margin-top: 0; color: #333; }
+        
+        /* Стили для Задания 2 */
+        .hover-box { width: 200px; height: 50px; background-color: lightgray; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s; }
+        .highlight { background-color: orange !important; color: white; }
+
+        /* Стили для Задания 4 */
+        .target-block { width: 150px; height: 100px; background-color: #eee; border: 1px solid #999; margin-top: 10px; text-align: center; padding-top: 40px;}
+        button { cursor: pointer; padding: 5px 10px; margin-right: 5px; }
+
+        /* Стили для Задания 6 */
+        table { border-collapse: collapse; }
+        td { border: 1px solid black; padding: 15px; cursor: pointer; }
+        .active-cell { background-color: green; color: white; }
+
+        код для html: 
+        <!-- ЗАДАНИЕ 1 -->
+    <section id="task1">
+        <h3>1) Изменение текста при клике</h3>
+        <p id="text-element">Исходный текст...</p>
+        <button onclick="changeText()">Изменить текст</button>
+    </section>
+
+    <!-- ЗАДАНИЕ 2 -->
+    <section id="task2">
+        <h3>2) Переключение класса при наведении</h3>
+        <div class="hover-box" id="hover-target">Наведи на меня</div>
+    </section>
+
+    <!-- ЗАДАНИЕ 3 -->
+    <section id="task3">
+        <h3>3) Переключение видимости элемента</h3>
+        <button onclick="toggleVisibility()">Показать/Скрыть блок</button>
+        <div id="hidden-block" style="margin-top: 10px; padding: 10px; background: #f0f0f0;">
+            Этот блок может исчезнуть!
+        </div>
+    </section>
+
+    <!-- ЗАДАНИЕ 4 -->
+    <section id="task4">
+        <h3>4) Изменение стилей элементов</h3>
+        <button onclick="changeStyle('red', '20px')">Красный фон / Крупный шрифт</button>
+        <button onclick="changeStyle('blue', '12px')">Синий фон / Мелкий шрифт</button>
+        <button onclick="changeStyle('#fff', '14px')">Сбросить</button>
+        
+        <div id="style-target" class="target-block">Я меняюсь</div>
+    </section>
+
+    
+
+    <!-- ЗАДАНИЕ 6 -->
+    <section id="task6">
+        <h3>6) Изменение таблицы (Toggle)</h3>
+        <table>
+            <tr>
+                <td onclick="toggleCellColor(this)">Ячейка 1</td>
+                <td onclick="toggleCellColor(this)">Ячейка 2</td>
+            </tr>
+            <tr>
+                <td onclick="toggleCellColor(this)">Ячейка 3</td>
+                <td onclick="toggleCellColor(this)">Ячейка 4</td>
+            </tr>
+        </table>
+    </section>
+
+    <script>
+
+    код для Js:
+     // --- ФУНКЦИЯ ДЛЯ ЗАДАНИЯ 1 ---
+        function changeText() {
+            // Находим элемент по ID
+            const p = document.getElementById('text-element');
+            // Меняем его внутреннее содержимое
+            p.innerText = "Текст изменен";
+        }
+
+        // --- ФУНКЦИИ ДЛЯ ЗАДАНИЯ 2 ---
+        const hoverBox = document.getElementById('hover-target');
+        
+        // Слушаем событие "наведение мыши"
+        hoverBox.addEventListener('mouseenter', function() {
+            this.classList.add('highlight');
+        });
+
+        // Слушаем событие "уход мыши"
+        hoverBox.addEventListener('mouseleave', function() {
+            this.classList.remove('highlight');
+        });
+
+        // --- ФУНКЦИЯ ДЛЯ ЗАДАНИЯ 3 ---
+        function toggleVisibility() {
+            const block = document.getElementById('hidden-block');
+            
+            // Проверяем текущее значение стиля display
+            if (block.style.display === 'none') {
+                block.style.display = 'block'; // Показываем
+            } else {
+                block.style.display = 'none'; // Скрываем
+            }
+        }
+
+        // --- ФУНКЦИЯ ДЛЯ ЗАДАНИЯ 4 ---
+        function changeStyle(color, fontSize) {
+            const target = document.getElementById('style-target');
+            // Прямое изменение CSS свойств через JS
+            target.style.backgroundColor = color;
+            target.style.fontSize = fontSize;
+        }
+
+        
+
+        // --- ФУНКЦИЯ ДЛЯ ЗАДАНИЯ 6 ---
+        function toggleCellColor(tdElement) {
+            // toggle добавляет класс, если его нет, и убирает, если он есть
+            tdElement.classList.toggle('active-cell');
+        }
+ 
