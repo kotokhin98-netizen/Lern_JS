@@ -158,6 +158,31 @@ let y=false
 ! - логическая "НЕ".
 
 
+
+
+const inputANode = document.querySelector('.js-input-a')
+const inputBNode = document.querySelector('.js-input-b')
+const selectorOperationNode = document.querySelector('.js-select-operation')
+const btnResultNode = document.querySelector ('.js-btn-Result')
+const outputNode = document.querySelector('.js-output')
+
+btnResultNode.addEventListener('click', function(){
+    const a = Number(inputANode.value);
+    const b = Number(inputBNode.value);
+    const operation = selectorOperationNode.value;
+    
+    const result = calculator({
+        a,
+        b,
+        operation
+    });
+    console.log(result);
+    if(outputNode){
+        outputNode.textContent = result;
+    }
+});
+
+
 ДЗ:
 1:Напишите программу которая запрашивает у пользователя число и проверяет принадлежит ли число диапозану от 10 до 100, результат в консоль 
 2: Напишите программу которая запрашивает у пользователя число и выводит собщение о том четное или нет.
